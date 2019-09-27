@@ -1,0 +1,22 @@
+{
+  "name": "tests",
+  "version": "1.0.0",
+  "description": "**Edit a file, create a new file, and clone from Bitbucket in under 2 minutes**",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "jest": {
+  "collectCoverage": true
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://redfroglet@bitbucket.org/redfroglet/jest.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/redfroglet/jest#readme",
+  "devDependencies": {
+    "jest": "^24.9.0"
+  }
+}
