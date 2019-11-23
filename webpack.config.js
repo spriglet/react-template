@@ -3,7 +3,7 @@ var path = require('path')
 module.exports = {
   entry: path.resolve(__dirname, 'src/app'),
   output: {
-    path: __dirname + '/dist',
+    path: __dirname + '/../public',
     publicPath: '/',
     filename: 'bundle.js'
   },
@@ -11,10 +11,23 @@ module.exports = {
     contentBase: path.resolve(__dirname, 'public')
   },
   module: {
-    loaders: [
-      { test: /\.js$/, exclude: /node_modules/, loaders: ['babel-loader'], query: {presets:['react','es2015']}},
-      {test: /(\.css)$/, loaders: ['style-loader', 'css-loader']}
-    ]
+      rules: [
+        {
+          test: /\.(js|jsx)$/,
+          exclude: /node_modules/,
+          use: {
+            loader: "babel-loader",
+          },
+
+
+        },{
+          test: /\.css$/,
+          use: [
+            'style-loader',
+            'css-loader'
+          ]
+        }
+      ],
   }
 }
 
